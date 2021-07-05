@@ -1,6 +1,8 @@
 from flask import Flask,render_template
 import sqlite3
 
+from flask.typing import ResponseReturnValue
+
 app = Flask(__name__)
 
 
@@ -50,6 +52,9 @@ def score():
 def team():
     return render_template("team.html")
 
+@app.route('/curtain')
+def curtain():
+    return render_template("word.html")
 
 
 if __name__ == '__main__':
