@@ -18,7 +18,7 @@ def home():
 @app.route('/movie')
 def movie():
     datalist = []
-    con = sqlite3.connect("movie.db")
+    con = sqlite3.connect("movie.db")   #连接sqlite数据库
     cur = con.cursor()
     sql = "select * from movie250"
     data = cur.execute(sql)
